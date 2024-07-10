@@ -27,7 +27,7 @@ const columns = [
 
       return attachments?.length > 0
         ? attachments.map((i) => {
-            const url = i.url;
+            const url = i?.url;
             const file = fileFormat(url);
 
             return (
