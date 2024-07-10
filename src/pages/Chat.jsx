@@ -37,9 +37,10 @@ import { TypingLoader } from "../components/layout/Loaders";
 import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 
-const Chat = ({ chatId, user }) => {
+const Chat = ({ chatId: propChatId, user }) => {
   const inputRef = useRef(null);
-
+  const { chatId: urlChatId } = useParams();
+  const chatId = propChatId || urlChatId;
   const socket = getSocket();
   const dispatch = useDispatch();
   const navigate = useNavigate();

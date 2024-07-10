@@ -4,7 +4,6 @@ import { Box, Stack, Typography } from "@mui/material";
 import AvatarCard from "./AvatarCard";
 import { motion } from "framer-motion";
 import { useTheme } from "@mui/material/styles";
-import { useLocation } from 'react-router-dom';
 
 const ChatItem = ({
   avatar = [],
@@ -18,15 +17,13 @@ const ChatItem = ({
   handleDeleteChat,
 }) => {
   const theme = useTheme();
-  const location = useLocation();
-  const chatId = _id || location.pathname.split('/').pop();
 
   return (
     <Link
       sx={{
         padding: "0",
       }}
-      to={`/chat/${chatId}`}
+      to={`/chat/${_id}`}
       onContextMenu={(e) => handleDeleteChat(e, _id, groupChat)}
     >
       <motion.div
