@@ -108,7 +108,7 @@ const ProfileForm = () => {
         <label htmlFor="image-picker">
           <Avatar
             alt="Profile Image"
-            src={avatar.preview?avatar.preview:user.avatar.url}
+            src={avatar.preview?avatar.preview:user?.avatar?.url}
             sx={{ width: "100px", height: "100px", border: "6px solid black" }}
           />
         </label>

@@ -41,7 +41,7 @@ const MessageComponent = ({ message, user }) => {
     >
            <Avatar
           alt={sender?.name}
-          src={message?.sender?.avatar.url}
+          src={message?.sender?.avatar?.url}
           sx={{ height: "30px", width: "30px" }}
           style={{ margin: "0px 8px" }} 
         />
@@ -71,7 +71,7 @@ const MessageComponent = ({ message, user }) => {
           )}
           {attachments.length > 0 &&
             attachments.map((attachment, index) => {
-              const url = attachment.url;
+              const url = attachment?.url;
               const file = fileFormat(url);
 
               return (
