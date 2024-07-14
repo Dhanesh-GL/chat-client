@@ -23,7 +23,6 @@ import {
 import { getSocket } from "../../socket";
 import DeleteChatMenu from "../dialogs/DeleteChatMenu";
 import ChatList from "../specific/ChatList";
-import Profile from "../specific/Profile";
 import Header from "./Header";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Title from "../specific/Title";
