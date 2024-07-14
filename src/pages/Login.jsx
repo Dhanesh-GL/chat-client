@@ -252,6 +252,7 @@ const Login = () => {
                       <CameraAltIcon />
                       <VisuallyHiddenInput
                         type="file"
+                        accept="image/*"
                         onChange={avatar.changeHandler}
                       />
                     </>
