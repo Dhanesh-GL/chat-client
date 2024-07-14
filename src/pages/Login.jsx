@@ -29,7 +29,6 @@ const Login = () => {
   const handleSend = async (e) => {
     const toastId = toast.loading("Sending code...");
 
-    console.log(email.value);
     e.preventDefault();
     const config = {
       withCredentials: true,
@@ -120,7 +119,6 @@ const Login = () => {
     };
 
     try {
-      console.log("gggggggggggg");
       const { data } = await axios.post(
         `${server}/api/v1/user/new`,
         formData,

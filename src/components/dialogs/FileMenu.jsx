@@ -50,7 +50,6 @@ const FileMenu = ({ anchorE1, chatId }) => {
       files.forEach((file) => myForm.append("files", file));
 
       const res = await sendAttachments(myForm);
-
       if (res.data) toast.success(`${key} sent successfully`, { id: toastId });
       else toast.error(`Failed to send ${key}`, { id: toastId });
 

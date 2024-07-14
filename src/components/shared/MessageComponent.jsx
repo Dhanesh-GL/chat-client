@@ -10,7 +10,6 @@ import ReactPlayer from "react-player";
 
 const MessageComponent = ({ message, user }) => {
   const { sender, content, attachments = [], createdAt } = message;
-
   const sameSender = sender?._id === user?._id;
   const timeAgo = moment(createdAt).fromNow();
   const isUrl = (text) => {
@@ -24,7 +23,7 @@ const MessageComponent = ({ message, user }) => {
         controls
         width="100%"
         height="auto"
-        style={{ marginTop: "8px", minWidth: "220px" }} 
+        style={{ marginTop: "8px", minWidth: "220px" }}
       />
     );
   };
@@ -36,17 +35,16 @@ const MessageComponent = ({ message, user }) => {
         alignSelf: sameSender ? "flex-end" : "flex-start",
         width: "fit-content",
         display: "flex",
-        flexDirection: sameSender ? "row-reverse" : "row", 
+        flexDirection: sameSender ? "row-reverse" : "row",
       }}
     >
-           <Avatar
-          alt={sender?.name}
-          src={message?.sender?.avatar?.url}
-          sx={{ height: "30px", width: "30px" }}
-          style={{ margin: "0px 8px" }} 
-        />
+      <Avatar
+        alt={sender?.name}
+        src={message?.sender?.avatar?.url}
+        sx={{ height: "30px", width: "30px" }}
+        style={{ margin: "0px 8px" }}
+      />
       <Box sx={{ display: "flex" }}>
-   
         <Box
           sx={{
             backgroundColor: "background.default",
@@ -65,7 +63,7 @@ const MessageComponent = ({ message, user }) => {
           </Typography>
 
           {isUrl(content) ? (
-            renderPlayer(content) 
+            renderPlayer(content)
           ) : (
             <Typography color="text.primary">{content}</Typography>
           )}

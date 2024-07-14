@@ -1,5 +1,5 @@
 import { useFetchData } from "6pp";
-import { Avatar, Box, Stack } from "@mui/material";
+import { Avatar, Box, Stack, Skeleton } from "@mui/material";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import AdminLayout from "../../components/layout/AdminLayout";
@@ -62,7 +62,10 @@ const columns = [
     width: 200,
     renderCell: (params) => (
       <Stack direction={"row"} spacing={"1rem"} alignItems={"center"}>
-        <Avatar alt={params?.row?.sender?.name} src={params?.row?.sender?.avatar} />
+        <Avatar
+          alt={params?.row?.sender?.name}
+          src={params?.row?.sender?.avatar}
+        />
         <span>{params?.row?.sender?.name}</span>
       </Stack>
     ),
