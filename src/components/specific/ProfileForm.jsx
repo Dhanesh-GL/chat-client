@@ -41,7 +41,6 @@ const ProfileForm = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-
     setLoading(true);
     try {
       const formData = new FormData();
@@ -49,7 +48,7 @@ const ProfileForm = () => {
       formData.append("bio", bio.value);
       formData.append("name", name.value);
       formData.append("password", password.value);
-      formData.append("email", "gldhanesh22@gmail.com");
+      formData.append("email", user.email);
 
       const config = {
         withCredentials: true,
