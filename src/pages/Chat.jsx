@@ -186,6 +186,7 @@ const Chat = ({ chatId, user }) => {
   const handleSelectEmoji = (emoji) => {
     setMessage((prevMessage) => prevMessage + emoji);
   };
+
   return chatDetails.isLoading ? (
     <Skeleton />
   ) : (

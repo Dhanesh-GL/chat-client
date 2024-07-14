@@ -57,12 +57,13 @@ export default function Emoji({ onSelectEmoji, inputRef }) {
         <Picker
           onEmojiSelect={handleEmojiSelect}
           data={data}
-          emojiSize={30} 
+          emojiSize={30}
           perLine={7}
           previewPosition="none"
           navPosition="bottom"
           maxFrequentRows={0}
           set="apple"
+          autoFocus={true}
         />
       </Popover>
     </>
