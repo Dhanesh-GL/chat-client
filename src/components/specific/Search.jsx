@@ -71,14 +71,18 @@ const Search = () => {
         />
 
         <List>
-          {users.map((i) => (
-            <UserItem
-              user={i}
-              key={i._id}
-              handler={addFriendHandler}
-              handlerIsLoading={isLoadingSendFriendRequest}
-            />
-          ))}
+          {console.log(users)}
+          {users.map((i) => {
+            const modifiedUser = { ...i, name: i.email };
+            return (
+              <UserItem
+                user={modifiedUser}
+                key={i._id}
+                handler={addFriendHandler}
+                handlerIsLoading={isLoadingSendFriendRequest}
+              />
+            );
+          })}
         </List>
       </Stack>
     </Dialog>

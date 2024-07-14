@@ -16,11 +16,11 @@ const api = createApi({
     }),
 
     searchUser: builder.query({
-      query: (username) => ({
-        url: `user/search?username=${username}`,
+      query: (email) => ({
+        url: `user/search?email=${email}`,
         credentials: "include",
       }),
-      providesTags: ["User"],
+      providesTags: ["email"],
     }),
 
     sendFriendRequest: builder.mutation({

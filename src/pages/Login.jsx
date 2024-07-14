@@ -40,7 +40,7 @@ const Login = () => {
     const response = await axios.post(
       `${server}/api/v1/user/mail`,
       {
-        email: "sumimpact4@gmail.com",
+        email: email.value,
       },
       config
     );

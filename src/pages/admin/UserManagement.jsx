@@ -31,8 +31,8 @@ const columns = [
     width: 200,
   },
   {
-    field: "username",
-    headerName: "Username",
+    field: "email",
+    headerName: "Email",
     headerClassName: "table-header",
     width: 200,
   },

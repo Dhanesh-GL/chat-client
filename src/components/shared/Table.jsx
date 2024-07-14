@@ -33,6 +33,8 @@ const Table = ({ rows, columns, heading, rowHeight = 52 }) => {
         >
           {heading}
         </Typography>
+        {console.log(rows)}
+
         <DataGrid
           rows={rows}
           columns={columns}
