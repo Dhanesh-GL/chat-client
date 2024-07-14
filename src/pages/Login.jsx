@@ -27,6 +27,9 @@ import InputAdornment from "@mui/material/InputAdornment";
 
 const Login = () => {
   const handleSend = async (e) => {
+    const toastId = toast.loading("Sending code...");
+
+    console.log(email.value);
     e.preventDefault();
     const config = {
       withCredentials: true,
@@ -41,6 +44,9 @@ const Login = () => {
       },
       config
     );
+    toast.success("Code sent, please check mail", {
+      id: toastId,
+    });
   };
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -114,6 +120,7 @@ const Login = () => {
     };
 
     try {
+      console.log("gggggggggggg");
       const { data } = await axios.post(
         `${server}/api/v1/user/new`,
         formData,
@@ -215,7 +222,7 @@ const Login = () => {
             </>
           ) : (
             <>
-              <Typography  variant="h5" textAlign={"center"}>
+              <Typography variant="h5" textAlign={"center"}>
                 Sign up
               </Typography>
               <form
